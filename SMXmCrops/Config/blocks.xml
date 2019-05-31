@@ -1,0 +1,50 @@
+<configs>
+
+<!--	// MODLET:			SMXmCrops
+
+		// EAC:				Friendly
+
+		// VERSION:			A172b27r1
+
+		// BUILD:			A172b27
+
+		// DISCLAIMER:		Please be advised that this modlet is intended for use with the build mentioned above. That said it may very well be that
+							it can be used with other builds with little to no risk of failure. It all depends on the standard files being updated or not
+							and you can verify this by looking at the date of the standard files when an update have occured.
+
+		// MOD DESCRIPTION:	The purpose of this modlet is to remove the accidental pickups of seed when farming. This is obtained by removing the melee
+							collider from the cropsGrowingMaster. It then gives the seeds the CanPickup property which means they can be picked up with "E".
+							The abilities extend through the two growth cycles and ends when it reaches the harvestable state. When harvested it returns
+							to normal and the cycle restarts.
+
+							Be advised that any seeds picked up during the growth cycle will have to be replanted and the cycle resets. If it can be
+							picked up it is NOT ready for harvest!
+
+		// DEPENDENCIES:	None.
+
+		// TERMS OF USE:	You are allowed to use this modlet as is for your own personal use and/or distribute said modlet bundled with something of your
+							own creation as long as all the files of this modlet remain unaltered and you do not claim credit for creating the modlet itself
+							or any of the files provided with it.
+
+							You are welcome, but not required, to inform the developer of this modlet should you wish to bundle and re-distribute said modlet
+							as described above.
+
+							You are not allowed to use any of the assets bundled with this modlet in other projects where said modlet is not included
+							and credited. This restriction applies to all files that this modlet consist of.
+
+							You are required to inform and ask permission from the developer of this modlet should you wish to make changes to any files
+							provided with the intention to bundle and/or distribute.
+
+							Should permission be granted you are required to make the changes as a new modlet that injects into the modlet in question and
+							keeping load order in mind. The original modlet shall be distributed as is with no change to its files whatsoever.
+
+		// CREDITS:			Sirillion (author), Khaine (advice) & Haidr'Gna (advice).
+-->
+
+	<set xpath="/blocks/block[@name='cropsGrowingMaster']/property[@name='Collide']/@value">sight</set>
+
+	<append xpath="/blocks/block[@name='cropsGrowingMaster']">
+		<property name="CanPickup" value="true" />
+	</append>
+
+</configs>
